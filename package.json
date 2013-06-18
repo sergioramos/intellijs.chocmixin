@@ -2,7 +2,8 @@
   "name": "intellijs",
   "version": "0.0.1",
   "dependencies": {
-    "request": "~2.21.0",
-    "handlebars": "~1.0.12"
+    "ternproxy": "git://github.com/fileability/ternproxy.git#c28ab16c29dfaf5f24b5303036f740ec684c194a",
+    "handlebars": "1.0.x",
+    "request": "2.21.x"
   }
 }
