@@ -52,14 +52,14 @@ module.exports.type = function (body, callback) {
     if(typeof body === 'string') body = JSON.parse(body)
     callback(null, body)
   }
-
+  
   if(listening) return request.post('http://127.0.0.1:8542/type', {form: body}, function (e, res, body) {
     process(e, body, res)
   })
-
+  
   var workspace = tern.workspace.find(body)
   if(!workspace) return callback('intellijs/type: NO WORKSPACE')
-
+  
   workspace.tern.request({
     query: {
       type: 'type',

@@ -9,7 +9,7 @@ module.exports = function (r) {
     var range = new Range(definition.start, definition.end - definition.start)
     if(definition.file === doc.path()) return Editor.current().setSelection(range)
     var parent = MainWindow.current()
-    Document.open(body.file, parent, function (document) {
+    Document.open(definition.file, parent, function (document) {
       Editor.current().setSelection(range)
     })
   })
