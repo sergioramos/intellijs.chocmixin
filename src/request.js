@@ -28,6 +28,16 @@ module.exports.definition = function (body, callback) {
   })
 }
 
+module.exports.type = function (body, callback) {
+  var url = 'http://127.0.0.1:8542/type'
+
+  request.post(url, {form: body}, function (e, res, body) {
+    if(e) return callback(interpolate('intellijs/type: ERROR %j', e))
+    if(typeof body === 'string') body = JSON.parse(body)
+    callback(null, body)
+  })
+}
+
 module.exports.rename = function (body, callback) {
   var url = 'http://127.0.0.1:8542/rename'
   
