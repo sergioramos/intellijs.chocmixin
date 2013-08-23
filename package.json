@@ -1,6 +1,6 @@
 {
   "name": "intellijs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "handlebars": "1.0.x",
     "request": "2.21.x",

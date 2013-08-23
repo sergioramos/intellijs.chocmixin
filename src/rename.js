@@ -57,7 +57,7 @@ module.exports = function (r) {
   var range = new Range(cursor_position, 1)
   
   var win = new Popover(Editor.current(), range)
-  win.size = { width: 169, height: 62 }
+  win.size = { width: 169, height: 38 }
 
   win.onLoad = function () {
     win.applyFunction(function () {
